@@ -45,16 +45,16 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 text-gray-400 mr-3 mt-0.5" />
-                <span className="text-gray-400">123 Innovation Drive, Tech City, TC 12345</span>
+                <span className="text-gray-400">Plot 28, Telecom nagar, Gachibowli, Hyderabad</span>
               </div>
               <div className="flex items-center">
                 <Phone className="h-5 w-5 text-gray-400 mr-3" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+                <span className="text-gray-400">+91 (630) 918-5996</span>
               </div>
               <div className="flex items-center">
                 <Mail className="h-5 w-5 text-gray-400 mr-3" />
                 <a href="mailto:contact@arkridge.com" className="text-gray-400 hover:text-white transition-colors duration-300">
-                  contact@arkridge.com
+                  info@arkridgeindustries.com
                 </a>
               </div>
             </div>
