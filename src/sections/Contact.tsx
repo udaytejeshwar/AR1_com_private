@@ -213,24 +213,24 @@ const Contact: React.FC = () => {
           
           <div>
             <div className="bg-blue-600 rounded-xl p-8 lg:p-12 text-white mb-8">
-              <h3 className="text-2xl font-semibold mb-6">Our Headquarters</h3>
+              <h3 className="text-2xl font-semibold mb-6">Our Office</h3>
               
               <div className="space-y-4 mb-8">
                 <p className="flex items-start">
                   <span className="font-medium mr-2">Address:</span>
-                  <span>123 Innovation Drive, Tech City, TC 12345</span>
+                  <span>Plot 28, Telecom nagar, Gachibowli, Hyderabad</span>
                 </p>
                 <p className="flex items-start">
                   <span className="font-medium mr-2">Phone:</span>
-                  <span>+1 (555) 123-4567</span>
+                  <span>+91 (630) 918-5996</span>
                 </p>
                 <p className="flex items-start">
                   <span className="font-medium mr-2">Email:</span>
-                  <span>contact@arkridge.com</span>
+                  <span>info@arkridgeindustries.com</span>
                 </p>
                 <p className="flex items-start">
                   <span className="font-medium mr-2">Hours:</span>
-                  <span>Monday - Friday: 8:00 AM - 6:00 PM EST</span>
+                  <span>Monday - Saturday: 8:00 AM - 6:00 PM EST</span>
                 </p>
               </div>
               
