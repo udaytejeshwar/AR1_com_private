@@ -1,14 +1,15 @@
-name: Deploy Vite App to GitHub Pages
+name: Deploy to Public GitHub Pages Repo
 
 on:
   push:
     branches: [main]
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repo
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Set up Node.js
@@ -28,6 +29,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          personal_token: ${{ secrets.DEPLOY_TOKEN }}
+          external_repository: udaytejeshwar/AR1_com_public
           publish_branch: gh-pages
+          publish_dir: ./dist
