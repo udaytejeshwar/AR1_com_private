@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4 tracking-tighter">ARKRIDGE</h3>
             <p className="text-gray-400 max-w-xs">
-              Redefining precision manufacturing across industries with cutting-edge
+              Redefining precision Manufacturing across industries with cutting-edge
               technology and uncompromising quality.
             </p>
           </div>
