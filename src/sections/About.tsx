@@ -36,7 +36,7 @@ const About: React.FC = () => {
               </h2>
               
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Founded in 2025, our company represents the culmination of decades of manufacturing expertise, cutting-edge technology integration, and a vision to transform how precision components are designed and produced across multiple industries.
+                Our company represents the culmination of decades of manufacturing expertise, cutting-edge technology integration, and a vision to transform how precision components are designed and produced across multiple industries.
               </p>
               
               <p className="text-lg text-gray-700 mb-8 leading-relaxed">
