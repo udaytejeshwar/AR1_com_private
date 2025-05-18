@@ -144,28 +144,6 @@ const Capabilities: React.FC = () => {
                   </button>
                 ))}
               </div>
-              
-              <div className="mt-8 p-6 bg-blue-50 rounded-lg border border-blue-100">
-                <h4 className="font-semibold text-gray-900 mb-3">Industry Certifications</h4>
-                <ul className="space-y-2">
-                  <li className="text-gray-700 flex items-center">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
-                    ISO 9001:2015
-                  </li>
-                  <li className="text-gray-700 flex items-center">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
-                    AS9100D (Aerospace)
-                  </li>
-                  <li className="text-gray-700 flex items-center">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
-                    ISO 13485 (Medical)
-                  </li>
-                  <li className="text-gray-700 flex items-center">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
-                    IATF 16949 (Automotive)
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
