@@ -4,7 +4,7 @@ const capabilities = [
   {
     id: 'cnc',
     title: 'Advanced CNC Machining',
-    description: 'Our 5-axis CNC machines achieve tolerances as tight as ±0.0001 inches, creating complex geometries with exceptional surface finishes.',
+    description: 'Tolerances as tight as ±0.0001 inches, creating complex geometries with exceptional surface finishes.',
     details: [
       '5-axis simultaneous machining',
       'Micro-machining capabilities',
@@ -16,7 +16,7 @@ const capabilities = [
   {
     id: 'additive',
     title: 'Additive Manufacturing',
-    description: 'Our metal and polymer 3D printing technologies create components with internal features and geometries impossible with traditional methods.',
+    description: '3D printing technologies create components with internal features and geometries impossible with traditional methods.',
     details: [
       'Direct metal laser sintering (DMLS)',
       'Selective laser melting (SLM)',
@@ -28,7 +28,7 @@ const capabilities = [
   {
     id: 'metrology',
     title: 'Advanced Metrology',
-    description: 'Our quality assurance employs cutting-edge measurement systems including CMM, CT scanning, and laser scanning for comprehensive verification.',
+    description: 'Quality assurance employs cutting-edge measurement systems including CMM, CT scanning, and laser scanning for comprehensive verification.',
     details: [
       'High-precision coordinate measuring machines',
       'Optical measurement systems',
@@ -40,7 +40,7 @@ const capabilities = [
   {
     id: 'materials',
     title: 'Advanced Materials',
-    description: 'We work with the full spectrum of engineering materials, from traditional alloys to advanced composites and custom-developed materials.',
+    description: 'Full spectrum of engineering materials, from traditional alloys to advanced composites and custom-developed materials.',
     details: [
       'Titanium and super alloys',
       'Medical-grade materials',
@@ -86,7 +86,7 @@ const Capabilities: React.FC = () => {
             Our Manufacturing Capabilities
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            We leverage cutting-edge technology and proprietary processes to achieve exceptional results across all dimensions of precision manufacturing.
+            We leverage cutting-edge technology and processes to achieve exceptional results across all dimensions of precision manufacturing.
           </p>
         </div>
         
