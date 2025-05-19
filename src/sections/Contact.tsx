@@ -234,27 +234,9 @@ const Contact: React.FC = () => {
                 </p>
               </div>
               
-              <p className="text-white/80">
-                We have additional manufacturing facilities in Europe and Asia to serve our global clients.
-              </p>
+              
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="bg-gray-100 p-6 rounded-lg text-center">
-                <p className="text-4xl font-bold text-blue-600 mb-2">48h</p>
-                <p className="text-gray-700">Average Response Time</p>
-              </div>
-              
-              <div className="bg-gray-100 p-6 rounded-lg text-center">
-                <p className="text-4xl font-bold text-blue-600 mb-2">97%</p>
-                <p className="text-gray-700">Client Satisfaction</p>
-              </div>
-              
-              <div className="bg-gray-100 p-6 rounded-lg text-center">
-                <p className="text-4xl font-bold text-blue-600 mb-2">24/7</p>
-                <p className="text-gray-700">Customer Support</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
