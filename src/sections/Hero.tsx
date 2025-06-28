@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { ChevronDown } from 'lucide-react';
+import heroBg from '../assets/hero-bg.jpg';
 
 const Hero: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -22,10 +23,13 @@ const Hero: React.FC = () => {
   return (
     <section className="relative h-screen overflow-hidden bg-gradient-to-r from-gray-900 to-gray-800">
       <div
-        ref={heroRef}
-        className="absolute inset-0 w-full h-full bg-[url('https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center"
-        style={{ opacity: 0.3 }}
-      />
+  ref={heroRef}
+  className="absolute inset-0 w-full h-full bg-cover bg-center"
+  style={{
+    backgroundImage: `url(${heroBg})`,
+    opacity: 0.3
+  }}
+/>
       
       <div className="absolute inset-0 bg-black/30" />
       
