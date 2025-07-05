@@ -30,10 +30,10 @@ const Brands: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 reveal opacity-0">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Product Portfolio
+            Precision Engineering Solutions
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Starting with precision spindle technology, we're building a comprehensive portfolio of advanced motion systems and electromechanical components.
+            From our flagship electrospindle technology to our expanding portfolio of advanced motion systems, we deliver precision components that power next-generation industries.
           </p>
         </div>
         
