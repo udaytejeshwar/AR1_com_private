@@ -19,8 +19,9 @@ const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'About', href: '#about' },
+    { name: 'Vision', href: '#vision' },
     { name: 'Industries', href: '#industries' },
+    { name: 'Products', href: '#brands' },
     { name: 'Capabilities', href: '#capabilities' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -29,7 +30,7 @@ const Navbar: React.FC = () => {
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/90 backdrop-blur-md shadow-sm py-2'
+          ? 'bg-white/95 backdrop-blur-md shadow-sm py-2'
           : 'bg-transparent py-4'
       }`}
     >
@@ -38,7 +39,9 @@ const Navbar: React.FC = () => {
           <div className="flex-shrink-0">
             <a
               href="#"
-              className="text-2xl font-semibold tracking-tighter text-gray-900"
+              className={`text-2xl font-bold tracking-tighter transition-colors duration-300 ${
+                isScrolled ? 'text-gray-900' : 'text-white'
+              }`}
             >
               ARKRIDGE
             </a>
@@ -49,7 +52,11 @@ const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-800 hover:text-gray-600 px-3 py-2 text-sm font-medium transition-colors duration-300"
+                className={`px-3 py-2 text-sm font-medium transition-colors duration-300 ${
+                  isScrolled 
+                    ? 'text-gray-800 hover:text-blue-600' 
+                    : 'text-white hover:text-blue-300'
+                }`}
               >
                 {link.name}
               </a>
@@ -59,7 +66,11 @@ const Navbar: React.FC = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-800 hover:text-gray-600 focus:outline-none"
+              className={`inline-flex items-center justify-center p-2 rounded-md transition-colors duration-300 focus:outline-none ${
+                isScrolled 
+                  ? 'text-gray-800 hover:text-blue-600' 
+                  : 'text-white hover:text-blue-300'
+              }`}
             >
               {isOpen ? (
                 <X className="h-6 w-6" aria-hidden="true" />
@@ -83,7 +94,7 @@ const Navbar: React.FC = () => {
             <a
               key={link.name}
               href={link.href}
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-gray-600"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-blue-600 transition-colors duration-300"
               onClick={() => setIsOpen(false)}
             >
               {link.name}
