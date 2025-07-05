@@ -5,6 +5,7 @@ interface FormData {
   name: string;
   email: string;
   company: string;
+  inquiry: string;
   message: string;
 }
 
@@ -12,6 +13,7 @@ const initialFormData = {
   name: '',
   email: '',
   company: '',
+  inquiry: 'general',
   message: ''
 };
 
@@ -49,21 +51,9 @@ const Contact: React.FC = () => {
     setError(null);
 
     try {
-      const response = await fetch('https://script.google.com/macros/s/YOUR_GOOGLE_SCRIPT_ID/exec', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...formData,
-          timestamp: new Date().toISOString()
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to submit form');
-      }
-
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
       setIsSubmitted(true);
       setFormData(initialFormData);
       
@@ -78,7 +68,7 @@ const Contact: React.FC = () => {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -88,16 +78,16 @@ const Contact: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 reveal opacity-0">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Connect With Us
+            Partner with ArkRidge Industries
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Reach out to discuss how our precision manufacturing expertise can help solve your most complex challenges.
+            Whether you need our current spindle technology or want to discuss future collaboration opportunities, we're here to help engineer your next breakthrough.
           </p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start reveal opacity-0">
           <div className="bg-gray-50 rounded-xl p-8 lg:p-12">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Get In Touch</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Start a Conversation</h3>
             
             {isSubmitted ? (
               <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
@@ -105,7 +95,7 @@ const Contact: React.FC = () => {
                   <div className="ml-3">
                     <h3 className="text-lg font-medium text-green-800">Message Received</h3>
                     <p className="mt-2 text-green-700">
-                      Thank you for reaching out. Our team will be in contact with you shortly.
+                      Thank you for your interest in ArkRidge Industries. Our team will be in contact with you shortly to discuss your requirements.
                     </p>
                   </div>
                 </div>
@@ -152,19 +142,40 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="mb-6">
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
-                    Company Name
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300"
-                    placeholder="Your Company"
-                  />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
+                      Company Name
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300"
+                      placeholder="Your Company"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="inquiry" className="block text-sm font-medium text-gray-700 mb-1">
+                      Inquiry Type
+                    </label>
+                    <select
+                      id="inquiry"
+                      name="inquiry"
+                      value={formData.inquiry}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300"
+                    >
+                      <option value="general">General Inquiry</option>
+                      <option value="spindles">Ark Spindles Products</option>
+                      <option value="partnership">Partnership Opportunities</option>
+                      <option value="custom">Custom Development</option>
+                      <option value="investment">Investment/Funding</option>
+                    </select>
+                  </div>
                 </div>
                 
                 <div className="mb-6">
@@ -179,7 +190,7 @@ const Contact: React.FC = () => {
                     required
                     rows={5}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300"
-                    placeholder="Tell us about your project or inquiry..."
+                    placeholder="Tell us about your project, requirements, or how we can help..."
                   ></textarea>
                 </div>
                 
@@ -212,8 +223,8 @@ const Contact: React.FC = () => {
           </div>
           
           <div>
-            <div className="bg-blue-600 rounded-xl p-8 lg:p-12 text-white mb-8">
-              <h3 className="text-2xl font-semibold mb-6">Our Office</h3>
+            <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl p-8 lg:p-12 text-white mb-8 shadow-2xl">
+              <h3 className="text-2xl font-semibold mb-6">Connect with ArkRidge</h3>
               
               <div className="space-y-4 mb-8">
                 <p className="flex items-start">
@@ -230,13 +241,25 @@ const Contact: React.FC = () => {
                 </p>
                 <p className="flex items-start">
                   <span className="font-medium mr-2">Hours:</span>
-                  <span>Monday - Saturday: 8:00 AM - 6:00 PM EST</span>
+                  <span>Monday - Saturday: 8:00 AM - 6:00 PM IST</span>
                 </p>
               </div>
               
-              
+              <div className="border-t border-blue-400 pt-6">
+                <h4 className="font-semibold mb-3">Quick Links</h4>
+                <div className="space-y-2">
+                  <a href="#brands" className="block text-blue-100 hover:text-white transition-colors">
+                    → Ark Spindles Products
+                  </a>
+                  <a href="#capabilities" className="block text-blue-100 hover:text-white transition-colors">
+                    → Engineering Capabilities
+                  </a>
+                  <a href="#industries" className="block text-blue-100 hover:text-white transition-colors">
+                    → Target Industries
+                  </a>
+                </div>
+              </div>
             </div>
-            
           </div>
         </div>
       </div>
