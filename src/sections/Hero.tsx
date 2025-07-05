@@ -21,50 +21,50 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative h-screen overflow-hidden bg-gradient-to-r from-gray-900 to-gray-800">
+    <section className="relative h-screen overflow-hidden bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900">
       <div
-  ref={heroRef}
-  className="absolute inset-0 w-full h-full bg-cover bg-center"
-  style={{
-    backgroundImage: `url(${heroBg})`,
-    opacity: 0.3
-  }}
-/>
+        ref={heroRef}
+        className="absolute inset-0 w-full h-full bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${heroBg})`,
+          opacity: 0.2
+        }}
+      />
       
-      <div className="absolute inset-0 bg-black/30" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
       
       <div className="relative h-full flex flex-col justify-center items-center text-white px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tighter mb-6 animate-fade-in">
-            Pioneering Tomorrow's <br /> 
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-500">
-              Manufacturing Solutions
+            Precision at the Core. <br /> 
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-400">
+              Innovation at Scale.
             </span>
           </h1>
           
-          <p className="text-xl sm:text-2xl md:text-3xl text-gray-200 mb-10 max-w-3xl mx-auto animate-fade-in-delayed">
-            Advancing precision manufacturing with cutting-edge technology and innovation
+          <p className="text-xl sm:text-2xl md:text-3xl text-gray-200 mb-10 max-w-4xl mx-auto animate-fade-in-delayed leading-relaxed">
+            ArkRidge Industries designs and builds advanced motion systems and critical electromechanical components for next-generation industries.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-delayed-more">
             <a 
-              href="#about"
-              className="px-8 py-4 bg-white text-gray-900 rounded-md text-lg font-medium hover:bg-gray-100 transition-colors duration-300"
+              href="#vision"
+              className="px-8 py-4 bg-blue-600 text-white rounded-md text-lg font-medium hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              Discover More
+              Our Vision
             </a>
             <a 
-              href="#contact"
-              className="px-8 py-4 bg-transparent border-2 border-white rounded-md text-lg font-medium hover:bg-white/10 transition-colors duration-300"
+              href="#brands"
+              className="px-8 py-4 bg-transparent border-2 border-white rounded-md text-lg font-medium hover:bg-white/10 transition-all duration-300"
             >
-              Get In Touch
+              Our Products
             </a>
           </div>
         </div>
       </div>
       
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <a href="#about" className="text-white">
+        <a href="#vision" className="text-white">
           <ChevronDown className="w-10 h-10" />
         </a>
       </div>
