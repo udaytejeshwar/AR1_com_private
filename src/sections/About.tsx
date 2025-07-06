@@ -32,7 +32,7 @@ const About: React.FC = () => {
             <div className="reveal opacity-0">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
                 Engineering the Future of <br />
-                <span className="text-blue-600">Precision Manufacturing</span>
+                <span style={{ color: '#4d5d6d' }}>Precision Manufacturing</span>
               </h2>
               
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
@@ -43,7 +43,7 @@ const About: React.FC = () => {
                 Our infrastructure is being designed to serve the future of these industries, combining advanced simulation, AI-based optimization, and cutting-edge manufacturing processes to deliver components that exceed tomorrow's standards.
               </p>
               
-              <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
+              <div className="bg-gray-50 border-l-4 border-gray-600 p-6 mb-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Current Operations</h3>
                 <p className="text-gray-700">
                   We currently manufacture high-performance electrospindles under our dedicated brand <strong>Ark Spindles</strong>. These products are engineered for demanding machining applications across wood, stone, and aluminum processing, serving as our foundation for broader manufacturing excellence.
@@ -51,22 +51,22 @@ const About: React.FC = () => {
               </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="border-l-4 border-blue-500 pl-4">
+                <div className="border-l-4 border-gray-600 pl-4">
                   <p className="text-3xl font-bold text-gray-900">R&D</p>
                   <p className="text-gray-600">Driven Innovation</p>
                 </div>
                 
-                <div className="border-l-4 border-blue-500 pl-4">
+                <div className="border-l-4 border-gray-600 pl-4">
                   <p className="text-3xl font-bold text-gray-900">99.9%</p>
                   <p className="text-gray-600">Precision Standards</p>
                 </div>
                 
-                <div className="border-l-4 border-blue-500 pl-4">
+                <div className="border-l-4 border-gray-600 pl-4">
                   <p className="text-3xl font-bold text-gray-900">Multi</p>
                   <p className="text-gray-600">Industry Focus</p>
                 </div>
                 
-                <div className="border-l-4 border-blue-500 pl-4">
+                <div className="border-l-4 border-gray-600 pl-4">
                   <p className="text-3xl font-bold text-gray-900">Global</p>
                   <p className="text-gray-600">Vision & Reach</p>
                 </div>
@@ -76,7 +76,7 @@ const About: React.FC = () => {
           
           <div className="reveal opacity-0">
             <div className="relative">
-              <div className="absolute -top-6 -left-6 w-64 h-64 bg-blue-100 rounded-lg -z-10"></div>
+              <div className="absolute -top-6 -left-6 w-64 h-64 bg-gray-100 rounded-lg -z-10"></div>
               <img 
                 src="https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
                 alt="Advanced engineering and design facility" 
@@ -97,19 +97,19 @@ const About: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-blue-600 to-blue-800 text-white p-8 rounded-lg shadow-lg">
+            <div className="bg-gradient-to-br from-black to-gray-800 text-white p-8 rounded-lg shadow-lg" style={{ background: 'linear-gradient(135deg, #4d5d6d 0%, #000000 100%)' }}>
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
                 <span className="text-white text-2xl">🔬</span>
               </div>
               <h4 className="text-xl font-semibold mb-4">Advanced Simulation & Testing</h4>
-              <p className="text-blue-100">
+              <p className="text-gray-200">
                 Comprehensive finite element analysis, thermal modeling, and vibration testing ensure our components perform flawlessly under extreme conditions before they reach production.
               </p>
             </div>
             
             <div className="bg-gray-50 p-8 rounded-lg hover:shadow-md transition-shadow duration-300">
-              <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mb-6">
-                <span className="text-blue-600 text-2xl">⚙️</span>
+              <div className="w-16 h-16 bg-gray-500/10 rounded-full flex items-center justify-center mb-6">
+                <span style={{ color: '#4d5d6d' }} className="text-2xl">⚙️</span>
               </div>
               <h4 className="text-xl font-semibold mb-4 text-gray-900">CAD/CAM Integration</h4>
               <p className="text-gray-600">
@@ -118,8 +118,8 @@ const About: React.FC = () => {
             </div>
             
             <div className="bg-gray-50 p-8 rounded-lg hover:shadow-md transition-shadow duration-300">
-              <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mb-6">
-                <span className="text-blue-600 text-2xl">🤖</span>
+              <div className="w-16 h-16 bg-gray-500/10 rounded-full flex items-center justify-center mb-6">
+                <span style={{ color: '#4d5d6d' }} className="text-2xl">🤖</span>
               </div>
               <h4 className="text-xl font-semibold mb-4 text-gray-900">AI-Based Optimization</h4>
               <p className="text-gray-600">
