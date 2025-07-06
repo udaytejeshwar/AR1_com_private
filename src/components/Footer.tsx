@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
               Engineering precision motion systems and electromechanical components for next-generation industries. Building tomorrow's technology today.
             </p>
             <div className="flex space-x-4">
-              <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
+              <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: '#4d5d6d' }}>
                 <span className="text-white font-bold">A</span>
               </div>
             </div>
