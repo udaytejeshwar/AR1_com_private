@@ -120,7 +120,8 @@ const Contact: React.FC = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all duration-300"
+                      style={{ focusRingColor: '#4d5d6d' }}
                       placeholder="John Smith"
                     />
                   </div>
@@ -136,7 +137,8 @@ const Contact: React.FC = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all duration-300"
+                      style={{ focusRingColor: '#4d5d6d' }}
                       placeholder="john@example.com"
                     />
                   </div>
@@ -153,7 +155,8 @@ const Contact: React.FC = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all duration-300"
+                      style={{ focusRingColor: '#4d5d6d' }}
                       placeholder="Your Company"
                     />
                   </div>
@@ -167,7 +170,8 @@ const Contact: React.FC = () => {
                       name="inquiry"
                       value={formData.inquiry}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all duration-300"
+                      style={{ focusRingColor: '#4d5d6d' }}
                     >
                       <option value="general">General Inquiry</option>
                       <option value="spindles">Ark Spindles Products</option>
@@ -189,7 +193,8 @@ const Contact: React.FC = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all duration-300"
+                    style={{ focusRingColor: '#4d5d6d' }}
                     placeholder="Tell us about your project, requirements, or how we can help..."
                   ></textarea>
                 </div>
@@ -199,9 +204,12 @@ const Contact: React.FC = () => {
                   disabled={isSubmitting}
                   className={`w-full flex items-center justify-center px-6 py-3 rounded-lg text-white font-medium transition-all duration-300 ${
                     isSubmitting
-                      ? 'bg-blue-400 cursor-not-allowed'
-                      : 'bg-blue-600 hover:bg-blue-700'
+                      ? 'cursor-not-allowed'
+                      : 'hover:opacity-90'
                   }`}
+                  style={{ 
+                    background: isSubmitting ? '#9ca3af' : 'linear-gradient(135deg, #4d5d6d 0%, #000000 100%)'
+                  }}
                 >
                   {isSubmitting ? (
                     <span className="flex items-center">
@@ -223,7 +231,7 @@ const Contact: React.FC = () => {
           </div>
           
           <div>
-            <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl p-8 lg:p-12 text-white mb-8 shadow-2xl">
+            <div className="rounded-xl p-8 lg:p-12 text-white mb-8 shadow-2xl" style={{ background: 'linear-gradient(135deg, #4d5d6d 0%, #000000 100%)' }}>
               <h3 className="text-2xl font-semibold mb-6">Connect with ArkRidge</h3>
               
               <div className="space-y-4 mb-8">
@@ -245,16 +253,16 @@ const Contact: React.FC = () => {
                 </p>
               </div>
               
-              <div className="border-t border-blue-400 pt-6">
+              <div className="border-t border-gray-400 pt-6">
                 <h4 className="font-semibold mb-3">Quick Links</h4>
                 <div className="space-y-2">
-                  <a href="#brands" className="block text-blue-100 hover:text-white transition-colors">
+                  <a href="#brands" className="block text-gray-200 hover:text-white transition-colors">
                     → Ark Spindles Products
                   </a>
-                  <a href="#capabilities" className="block text-blue-100 hover:text-white transition-colors">
+                  <a href="#capabilities" className="block text-gray-200 hover:text-white transition-colors">
                     → Engineering Capabilities
                   </a>
-                  <a href="#industries" className="block text-blue-100 hover:text-white transition-colors">
+                  <a href="#industries" className="block text-gray-200 hover:text-white transition-colors">
                     → Target Industries
                   </a>
                 </div>
