@@ -234,7 +234,7 @@ style={{ color: '#4d5d6d' }}
 
       {/* Curtain Overlay - Slides from right to left */}
       <div
-        className={`absolute inset-0 bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 transition-transform duration-300 ease-out z-10 ${
+        className={`absolute inset-0 bg-gradient-to-r from-gray-900 via-[#4d5d6d] to-gray-900 transition-transform duration-300 ease-out z-10 ${
           isDragging ? 'cursor-grabbing' : 'cursor-grab'
         }`}
         style={{
