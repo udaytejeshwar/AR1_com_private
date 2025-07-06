@@ -87,9 +87,10 @@ const Industries: React.FC = () => {
                   onClick={() => setActiveIndustry(industry.id)}
                   className={`w-full text-left p-6 rounded-lg transition-all duration-300 ${
                     activeIndustry === industry.id
-                      ? 'bg-blue-600 text-white shadow-md'
+                      ? 'text-white shadow-md'
                       : 'bg-white text-gray-700 hover:bg-gray-100'
                   }`}
+                  style={activeIndustry === industry.id ? { background: 'linear-gradient(135deg, #4d5d6d 0%, #000000 100%)' } : {}}
                 >
                   <span className="font-medium text-lg">{industry.name}</span>
                 </button>
@@ -122,14 +123,15 @@ const Industries: React.FC = () => {
         </div>
         
         <div className="mt-16 text-center reveal opacity-0">
-          <div className="bg-blue-600 text-white rounded-xl p-8 max-w-4xl mx-auto">
+          <div className="text-white rounded-xl p-8 max-w-4xl mx-auto" style={{ background: 'linear-gradient(135deg, #4d5d6d 0%, #000000 100%)' }}>
             <h3 className="text-2xl font-bold mb-4">Ready to Partner with Us?</h3>
-            <p className="text-blue-100 mb-6">
+            <p className="text-gray-200 mb-6">
               Whether you need our current spindle technology or want to discuss future collaboration opportunities, we're here to help engineer your next breakthrough.
             </p>
             <a 
               href="#contact" 
-              className="inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 rounded-md text-lg font-medium hover:bg-gray-100 transition-colors duration-300"
+              className="inline-flex items-center justify-center px-6 py-3 bg-white rounded-md text-lg font-medium hover:bg-gray-100 transition-colors duration-300"
+              style={{ color: '#4d5d6d' }}
             >
               Start a Conversation
             </a>
