@@ -116,7 +116,7 @@ const Capabilities: React.FC = () => {
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {activeCapability.details.map((detail, index) => (
                     <li key={index} className="flex items-start">
-                      <span className="text-blue-600 mr-2">•</span>
+                      <span style={{ color: '#4d5d6d' }} className="mr-2">•</span>
                       <span className="text-gray-700">{detail}</span>
                     </li>
                   ))}
@@ -136,9 +136,10 @@ const Capabilities: React.FC = () => {
                     onClick={() => setActiveTab(capability.id)}
                     className={`w-full text-left p-4 rounded-lg transition-all duration-300 ${
                       activeTab === capability.id
-                        ? 'bg-blue-600 text-white shadow-md'
+                        ? 'text-white shadow-md'
                         : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
                     }`}
+                    style={activeTab === capability.id ? { background: 'linear-gradient(135deg, #4d5d6d 0%, #000000 100%)' } : {}}
                   >
                     <span className="font-medium">{capability.title}</span>
                   </button>
