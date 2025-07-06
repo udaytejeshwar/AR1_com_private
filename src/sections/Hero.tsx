@@ -198,7 +198,7 @@ const Hero: React.FC = () => {
               <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
                 <span className="text-2xl sm:text-3xl font-bold">⚡</span>
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tighter mb-3 sm:mb-4 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-[0.2em] mb-3 sm:mb-4 leading-tight uppercase" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-300">
                   Ark Spindles
                 </span>
@@ -216,12 +216,12 @@ const Hero: React.FC = () => {
                 <div className="text-xs sm:text-sm text-blue-200">RPM Max Speed</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4">
-                <div className="text-xl sm:text-2xl font-bold text-cyan-300 mb-1">99.9%</div>
-                <div className="text-xs sm:text-sm text-blue-200">Precision Rating</div>
+                <div className="text-xl sm:text-2xl font-bold text-cyan-300 mb-1">0.5Kw - 12Kw</div>
+                <div className="text-xs sm:text-sm text-blue-200">Power Rating</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4">
-                <div className="text-xl sm:text-2xl font-bold text-cyan-300 mb-1">24/7</div>
-                <div className="text-xs sm:text-sm text-blue-200">Industrial Grade</div>
+                <div className="text-xl sm:text-2xl font-bold text-cyan-300 mb-1">ER/HSK/ISO</div>
+                <div className="text-xs sm:text-sm text-blue-200">Tool Holders</div>
               </div>
             </div>
             
