@@ -4,11 +4,11 @@ import heroBg from '../assets/hero-bg.jpg';
 
 const Hero: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
-  const [curtainPosition, setCurtainPosition] = useState(25); // Start at 25% revealed
+  const [curtainPosition, setCurtainPosition] = useState(15); // Start at 15% revealed
   const [isDragging, setIsDragging] = useState(false);
   const [isRevealed, setIsRevealed] = useState(false);
   const [dragStartX, setDragStartX] = useState(0);
-  const [dragStartPosition, setDragStartPosition] = useState(25);
+  const [dragStartPosition, setDragStartPosition] = useState(15);
   const [isMobile, setIsMobile] = useState(false);
   
   useEffect(() => {
@@ -71,8 +71,8 @@ const Hero: React.FC = () => {
       setCurtainPosition(100);
       setIsRevealed(true);
     } else {
-      // Snap back to starting position (25%)
-      setCurtainPosition(25);
+      // Snap back to starting position (15%)
+      setCurtainPosition(15);
       setIsRevealed(false);
     }
   }, [isDragging, curtainPosition]);
@@ -150,7 +150,7 @@ const Hero: React.FC = () => {
   }, [isDragging, handleMouseMove, handleMouseUp, handleTouchMove, handleTouchEnd]);
 
   const resetCurtain = () => {
-    setCurtainPosition(25); // Reset to 25% instead of 0%
+    setCurtainPosition(15); // Reset to 15% instead of 0%
     setIsRevealed(false);
   };
 
@@ -180,37 +180,37 @@ const Hero: React.FC = () => {
         
         <div className="absolute inset-0 bg-gradient-to-b from-blue-900/60 via-blue-800/40 to-blue-900/80" />
         
-        <div className="relative h-full flex flex-col justify-center items-center text-white px-4 sm:px-6 lg:px-8">
+        <div className="relative h-full flex items-center justify-center text-white px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto text-center">
             {/* Ark Spindles Logo/Brand */}
             <div className="mb-8">
-              <div className="w-24 h-24 mx-auto mb-6 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                <span className="text-4xl font-bold">⚡</span>
+              <div className="w-20 h-20 mx-auto mb-6 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                <span className="text-3xl font-bold">⚡</span>
               </div>
-              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tighter mb-4">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-300">
                   Ark Spindles
                 </span>
               </h1>
             </div>
             
-            <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
               High-performance electrospindles engineered for demanding CNC machining applications. 
               Precision-built for wood, stone, and aluminum processing.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <div className="text-3xl font-bold text-cyan-300 mb-2">60,000</div>
-                <div className="text-blue-200">RPM Max Speed</div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10 max-w-3xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <div className="text-2xl font-bold text-cyan-300 mb-1">60,000</div>
+                <div className="text-sm text-blue-200">RPM Max Speed</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <div className="text-3xl font-bold text-cyan-300 mb-2">99.9%</div>
-                <div className="text-blue-200">Precision Rating</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <div className="text-2xl font-bold text-cyan-300 mb-1">99.9%</div>
+                <div className="text-sm text-blue-200">Precision Rating</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <div className="text-3xl font-bold text-cyan-300 mb-2">24/7</div>
-                <div className="text-blue-200">Industrial Grade</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <div className="text-2xl font-bold text-cyan-300 mb-1">24/7</div>
+                <div className="text-sm text-blue-200">Industrial Grade</div>
               </div>
             </div>
             
@@ -261,21 +261,21 @@ const Hero: React.FC = () => {
         
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
         
-        {/* Main Content */}
-        <div className="relative h-full flex flex-col justify-center items-center text-white px-4 sm:px-6 lg:px-8">
+        {/* Main Content - Fixed Layout */}
+        <div className="relative h-full flex items-center justify-center text-white px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tighter mb-6 animate-fade-in">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tighter mb-6">
               Precision at the Core. <br /> 
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-400">
                 Innovation at Scale.
               </span>
             </h1>
             
-            <p className="text-xl sm:text-2xl md:text-3xl text-gray-200 mb-10 max-w-4xl mx-auto animate-fade-in-delayed leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-10 max-w-4xl mx-auto leading-relaxed">
               ArkRidge Industries designs and builds advanced motion systems and critical electromechanical components for next-generation industries.
             </p>
             
-            <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-delayed-more">
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a 
                 href="#vision"
                 className="px-8 py-4 bg-blue-600 text-white rounded-md text-lg font-medium hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
@@ -294,13 +294,13 @@ const Hero: React.FC = () => {
 
         {/* Drag Hint */}
         {!isRevealed && (
-          <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white/70">
+          <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white/70 z-20">
             <div className="flex flex-col items-center animate-pulse">
-              <div className="w-1 h-16 bg-white/50 rounded-full mb-2"></div>
-              <span className="text-sm font-medium">
+              <div className="w-1 h-12 bg-white/50 rounded-full mb-2"></div>
+              <span className="text-xs font-medium whitespace-nowrap">
                 {isMobile ? 'Tap to reveal' : 'Drag to reveal'}
               </span>
-              <div className="w-1 h-16 bg-white/50 rounded-full mt-2"></div>
+              <div className="w-1 h-12 bg-white/50 rounded-full mt-2"></div>
             </div>
           </div>
         )}
