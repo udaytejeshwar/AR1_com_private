@@ -39,7 +39,7 @@ const Brands: React.FC = () => {
         
         <div className="max-w-4xl mx-auto reveal opacity-0">
           {/* Ark Spindles - Current Product */}
-          <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-8 lg:p-12 text-white shadow-2xl mb-12">
+          <div className="rounded-2xl p-8 lg:p-12 text-white shadow-2xl mb-12" style={{ background: 'linear-gradient(135deg, #4d5d6d 0%, #000000 100%)' }}>
             <div className="flex items-center justify-between mb-6">
               <div>
                 <h3 className="text-3xl font-bold mb-2">Ark Spindles</h3>
@@ -52,30 +52,30 @@ const Brands: React.FC = () => {
               </div>
             </div>
             
-            <p className="text-blue-100 text-lg mb-6 leading-relaxed">
+            <p className="text-gray-200 text-lg mb-6 leading-relaxed">
               High-performance electrospindles engineered for demanding CNC machining applications. Precision-built for wood, stone, and aluminum processing with exceptional reliability and performance.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
               <div className="flex items-center">
-                <span className="w-2 h-2 bg-blue-300 rounded-full mr-3"></span>
-                <span className="text-blue-100">High-speed precision spindles</span>
+                <span className="w-2 h-2 bg-gray-300 rounded-full mr-3"></span>
+                <span className="text-gray-200">High-speed precision spindles</span>
               </div>
               <div className="flex items-center">
-                <span className="w-2 h-2 bg-blue-300 rounded-full mr-3"></span>
-                <span className="text-blue-100">Advanced thermal management</span>
+                <span className="w-2 h-2 bg-gray-300 rounded-full mr-3"></span>
+                <span className="text-gray-200">Advanced thermal management</span>
               </div>
               <div className="flex items-center">
-                <span className="w-2 h-2 bg-blue-300 rounded-full mr-3"></span>
-                <span className="text-blue-100">Industrial-grade reliability</span>
+                <span className="w-2 h-2 bg-gray-300 rounded-full mr-3"></span>
+                <span className="text-gray-200">Industrial-grade reliability</span>
               </div>
               <div className="flex items-center">
-                <span className="w-2 h-2 bg-blue-300 rounded-full mr-3"></span>
-                <span className="text-blue-100">Custom configurations available</span>
+                <span className="w-2 h-2 bg-gray-300 rounded-full mr-3"></span>
+                <span className="text-gray-200">Custom configurations available</span>
               </div>
             </div>
             
-            <button className="w-full bg-white text-blue-600 py-3 px-6 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center">
+            <button className="w-full bg-white py-3 px-6 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center" style={{ color: '#4d5d6d' }}>
               Visit Ark Spindles
               <ExternalLink className="ml-2 h-5 w-5" />
             </button>
@@ -83,7 +83,7 @@ const Brands: React.FC = () => {
         </div>
         
         <div className="mt-16 text-center reveal opacity-0">
-          <div className="bg-gradient-to-r from-gray-900 to-blue-900 rounded-2xl p-8 lg:p-12 text-white">
+          <div className="rounded-2xl p-8 lg:p-12 text-white" style={{ background: 'linear-gradient(135deg, #000000 0%, #4d5d6d 100%)' }}>
             <h3 className="text-2xl lg:text-3xl font-bold mb-4">
               Building Tomorrow's Technology Today
             </h3>
@@ -93,7 +93,8 @@ const Brands: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="#contact" 
-                className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-md text-lg font-medium hover:bg-blue-700 transition-colors duration-300"
+                className="inline-flex items-center justify-center px-6 py-3 bg-white rounded-md text-lg font-medium hover:bg-gray-100 transition-colors duration-300"
+                style={{ color: '#4d5d6d' }}
               >
                 Partner with Us
                 <ArrowRight className="ml-2 h-5 w-5" />
