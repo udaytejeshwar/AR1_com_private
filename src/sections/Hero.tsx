@@ -166,7 +166,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative min-h-screen h-screen overflow-hidden bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900">
+    <section className="relative min-h-screen h-screen overflow-hidden bg-[radial-gradient(circle_at_50%_50%,_#4d5d6d,_#000000)]">
       {/* Background Layer - Always visible */}
       <div
         ref={heroRef}
@@ -180,29 +180,23 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
 
       {/* Revealed Content - Ark Spindles (Behind curtain) */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_#4d5d6d,_#000000)]">
         {/* Product Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-30"
-          style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/3822843/pexels-photo-3822843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)'
-          }}
-        />
         
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-900/60 via-blue-800/40 to-blue-900/80" />
+        
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-blue-900/60 via-blue-800/40 to-blue-900/80" /> */}
         
         <div className="relative h-full flex items-center justify-center text-white px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
           <div className="max-w-6xl mx-auto text-center w-full">
             {/* Ark Spindles Logo/Brand */}
             <div className="mb-6 sm:mb-8">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                <span className="text-2xl sm:text-3xl font-bold">⚡</span>
-              </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-[0.2em] mb-3 sm:mb-4 leading-tight uppercase" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-300">
-                  Ark Spindles
-                </span>
-              </h1>
+              
+              <h1
+  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-thin tracking-[0.50em] mb-3 sm:mb-4 leading-tight uppercase text-white"
+  style={{ fontFamily: "'Nunito Sans', sans-serif", fontStretch: 'expanded' }}
+>
+  ARK SPINDLES
+</h1>
             </div>
             
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed px-2">
@@ -210,20 +204,6 @@ const Hero: React.FC = () => {
               Precision-built for wood, stone, and aluminum processing.
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-8 sm:mb-10 max-w-3xl mx-auto px-2">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4">
-                <div className="text-xl sm:text-2xl font-bold text-cyan-300 mb-1">60,000</div>
-                <div className="text-xs sm:text-sm text-blue-200">RPM Max Speed</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4">
-                <div className="text-xl sm:text-2xl font-bold text-cyan-300 mb-1">0.5Kw - 12Kw</div>
-                <div className="text-xs sm:text-sm text-blue-200">Power Rating</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4">
-                <div className="text-xl sm:text-2xl font-bold text-cyan-300 mb-1">ER/HSK/ISO</div>
-                <div className="text-xs sm:text-sm text-blue-200">Tool Holders</div>
-              </div>
-            </div>
             
             {isRevealed && (
               <div className="animate-fade-in-delayed px-2">
@@ -232,7 +212,8 @@ const Hero: React.FC = () => {
                     href="https://arkspindles.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-blue-600 rounded-lg text-lg sm:text-xl font-bold hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105 w-full sm:w-auto justify-center"
+                    className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-white rounded-lg text-lg sm:text-xl font-bold hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105 w-full sm:w-auto justify-center"
+style={{ color: '#4d5d6d' }}
                   >
                     Explore Ark Spindles
                     <ArrowRight className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 sm:w-6" />
