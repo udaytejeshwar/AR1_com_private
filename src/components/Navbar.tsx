@@ -54,9 +54,10 @@ const Navbar: React.FC = () => {
                 href={link.href}
                 className={`px-3 py-2 text-sm font-medium transition-colors duration-300 ${
                   isScrolled 
-                    ? 'text-gray-800 hover:text-blue-600' 
-                    : 'text-white hover:text-blue-300'
+                    ? 'text-gray-800 hover:text-gray-600' 
+                    : 'text-white hover:text-gray-300'
                 }`}
+                style={isScrolled ? {} : { ':hover': { color: '#4d5d6d' } }}
               >
                 {link.name}
               </a>
@@ -68,8 +69,8 @@ const Navbar: React.FC = () => {
               onClick={() => setIsOpen(!isOpen)}
               className={`inline-flex items-center justify-center p-2 rounded-md transition-colors duration-300 focus:outline-none ${
                 isScrolled 
-                  ? 'text-gray-800 hover:text-blue-600' 
-                  : 'text-white hover:text-blue-300'
+                  ? 'text-gray-800 hover:text-gray-600' 
+                  : 'text-white hover:text-gray-300'
               }`}
             >
               {isOpen ? (
@@ -94,7 +95,7 @@ const Navbar: React.FC = () => {
             <a
               key={link.name}
               href={link.href}
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-blue-600 transition-colors duration-300"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-gray-600 transition-colors duration-300"
               onClick={() => setIsOpen(false)}
             >
               {link.name}
