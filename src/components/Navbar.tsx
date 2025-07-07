@@ -39,11 +39,38 @@ const Navbar: React.FC = () => {
           <div className="flex-shrink-0">
             <a
               href="#"
-              className={`text-2xl font-bold tracking-tighter transition-colors duration-300 ${
-                isScrolled ? 'text-gray-900' : 'text-white'
-              }`}
+              className="block"
             >
-              ARKRIDGE
+              <div className="text-center">
+                <div 
+                  className={`font-thin tracking-[0.09em] transition-colors duration-300 ${
+                    isScrolled ? 'text-gray-900' : 'text-white'
+                  }`}
+                  style={{ 
+                    fontFamily: "'Nunito Sans', sans-serif", 
+                    fontStretch: 'expanded',
+                    fontSize: '2.5rem',
+                    lineHeight: '1'
+                  }}
+                >
+                  ARKRIDGE
+                </div>
+                <div 
+                  className={`font-light transition-colors duration-300 ${
+                    isScrolled ? 'text-gray-900' : 'text-white'
+                  }`}
+                  style={{ 
+                    fontFamily: "'Nunito Sans', sans-serif", 
+                    fontStretch: 'expanded',
+                    fontSize: '1.25rem',
+                    lineHeight: '1',
+                    marginTop: '-0.0rem',
+                    letterSpacing: '0.6em'
+                  }}
+                >
+                  INDUSTRIES
+                </div>
+              </div>
             </a>
           </div>
 
