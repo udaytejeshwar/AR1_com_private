@@ -195,7 +195,7 @@ const Hero: React.FC = () => {
   className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-thin tracking-[0.50em] mb-3 sm:mb-4 leading-tight uppercase text-white"
   style={{ fontFamily: "'Nunito Sans', sans-serif", fontStretch: 'expanded' }}
 >
-  ARK SPINDLES
+  ARK SPINDLES™
 </h1>
             </div>
             
@@ -215,7 +215,7 @@ const Hero: React.FC = () => {
                     className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-white rounded-lg text-lg sm:text-xl font-bold hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105 w-full sm:w-auto justify-center"
 style={{ color: '#4d5d6d' }}
                   >
-                    Explore Ark Spindles
+                    Explore Ark Spindles™
                     <ArrowRight className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 sm:w-6" />
                   </a>
                   
@@ -293,7 +293,11 @@ style={{ color: '#4d5d6d' }}
           <div className="absolute right-0 top-1/2 transform -translate-y-1/2 z-20">
             <button
               onClick={handleSliderButtonClick}
-              className="group bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-600 hover:to-cyan-500 text-white font-bold py-4 px-3 sm:py-6 sm:px-4 rounded-l-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 animate-pulse hover:animate-none border-2 border-white/20"
+              className="group text-white font-bold py-4 px-3 sm:py-6 sm:px-4 rounded-l-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 animate-pulse hover:animate-none border-2 border-white/20"
+              style={{ 
+                background: 'linear-gradient(135deg, #4d5d6d 0%, #000000 100%)',
+                ':hover': { background: 'linear-gradient(135deg, #5d6d7d 0%, #1a1a1a 100%)' }
+              }}
             >
               <div className="flex flex-col items-center space-y-2">
                 <div className="text-xs sm:text-sm font-bold uppercase tracking-wider">
