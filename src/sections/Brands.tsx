@@ -42,13 +42,10 @@ const Brands: React.FC = () => {
           <div className="rounded-2xl p-8 lg:p-12 text-white shadow-2xl mb-12" style={{ background: 'linear-gradient(135deg, #4d5d6d 0%, #000000 100%)' }}>
             <div className="flex items-center justify-between mb-6">
               <div>
-                <h3 className="text-3xl font-bold mb-2">Ark Spindles</h3>
-                <span className="bg-green-400 text-green-900 px-3 py-1 rounded-full text-sm font-medium">
-                  Available Now
-                </span>
-              </div>
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
-                <span className="text-2xl">⚡</span>
+                <h3 className="text-1xl sm:text-2xl md:text-3xl font-thin tracking-[0.20em] mb-3 sm:mb-4 leading-tight uppercase text-white"
+  style={{ fontFamily: "'Nunito Sans', sans-serif", fontStretch: 'expanded' }}
+>
+  ARK SPINDLES</h3>
               </div>
             </div>
             
