@@ -17,25 +17,25 @@ const industries = [
     id: 3,
     name: 'CNC & Robotics',
     description: 'Currently serving this sector with our Ark Spindles electrospindle line. Expanding into advanced tool holders and precision motion systems for industrial automation.',
-    image: 'https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+    image: 'https://images.pexels.com/photos/10406128/pexels-photo-10406128.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   },
   {
     id: 4,
     name: 'Industrial Automation',
     description: 'Building mechatronics and robotics components that enable the next generation of smart manufacturing and automated production systems.',
-    image: 'https://images.pexels.com/photos/163100/circuit-circuit-board-resistor-computer-163100.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+    image: 'https://images.pexels.com/photos/19233057/pexels-photo-19233057.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   },
   {
     id: 5,
     name: 'Automotive Systems',
     description: 'Designing precision electromechanical components for electric vehicles and advanced automotive systems that require exceptional performance and durability.',
-    image: 'https://images.pexels.com/photos/356049/pexels-photo-356049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+    image: 'https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   },
   {
     id: 6,
     name: 'Defense',
     description: 'Developing mission-critical motion systems and precision components for defense applications where reliability and performance are paramount.',
-    image: 'https://images.pexels.com/photos/2406731/pexels-photo-2406731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+    image: 'https://images.pexels.com/photos/87011/helicopter-army-military-war-87011.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   }
 ];
 
