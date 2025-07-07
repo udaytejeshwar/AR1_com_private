@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               <li>
                 <a href="#brands" className="text-gray-400 hover:text-white transition-colors duration-300">
-                  Ark Spindles
+                  Ark Spindles™
                 </a>
               </li>
               <li>
