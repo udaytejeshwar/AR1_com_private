@@ -273,7 +273,8 @@ style={{ color: '#4d5d6d' }}
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-2">
               <a 
                 href="#vision"
-                className="px-6 sm:px-8 py-3 sm:py-4 bg-blue-600 text-white rounded-md text-base sm:text-lg font-medium hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto text-center"
+                className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-white rounded-lg text-lg sm:text-xl font-bold hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105 w-full sm:w-auto justify-center"
+style={{ color: '#4d5d6d' }}
               >
                 Our Vision
               </a>
@@ -297,6 +298,7 @@ style={{ color: '#4d5d6d' }}
               <div className="flex flex-col items-center space-y-2">
                 <div className="text-xs sm:text-sm font-bold uppercase tracking-wider">
                   {isMobile ? 'Tap' : 'Slide'}
+                  
                 </div>
                 <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8 group-hover:translate-x-1 transition-transform duration-300" />
                 <div className="text-xs sm:text-sm font-bold uppercase tracking-wider">
