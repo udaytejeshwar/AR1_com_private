@@ -78,7 +78,7 @@ const About: React.FC = () => {
             <div className="relative">
               <div className="absolute -top-6 -left-6 w-64 h-64 bg-gray-100 rounded-lg -z-10"></div>
               <img 
-                src="https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                src="https://images.pexels.com/photos/51320/drill-milling-milling-machine-drilling-51320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
                 alt="Advanced engineering and design facility" 
                 className="rounded-lg shadow-lg w-full object-cover"
                 style={{height: "600px"}} 
