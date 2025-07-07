@@ -174,7 +174,7 @@ const Contact: React.FC = () => {
                       style={{ focusRingColor: '#4d5d6d' }}
                     >
                       <option value="general">General Inquiry</option>
-                      <option value="spindles">Ark Spindles Products</option>
+                      <option value="spindles">Ark Spindles™ Products</option>
                       <option value="partnership">Partnership Opportunities</option>
                       <option value="custom">Custom Development</option>
                       <option value="investment">Investment/Funding</option>
@@ -257,7 +257,7 @@ const Contact: React.FC = () => {
                 <h4 className="font-semibold mb-3">Quick Links</h4>
                 <div className="space-y-2">
                   <a href="#brands" className="block text-gray-200 hover:text-white transition-colors">
-                    → Ark Spindles Products
+                    → Ark Spindles™ Products
                   </a>
                   <a href="#capabilities" className="block text-gray-200 hover:text-white transition-colors">
                     → Engineering Capabilities
