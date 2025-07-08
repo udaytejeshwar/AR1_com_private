@@ -45,7 +45,7 @@ const Brands: React.FC = () => {
                 <h3 className="text-1xl sm:text-2xl md:text-3xl font-thin tracking-[0.20em] mb-3 sm:mb-4 leading-tight uppercase text-white"
   style={{ fontFamily: "'Nunito Sans', sans-serif", fontStretch: 'expanded' }}
 >
-  ARK SPINDLES™</h3>
+  ARK SPINDLES<span className="text-[0.5em] align-top ml-[0.1em]">™</span></h3>
               </div>
             </div>
             
