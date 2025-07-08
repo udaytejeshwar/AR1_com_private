@@ -73,7 +73,7 @@ const Brands: React.FC = () => {
             </div>
             
             <button className="w-full bg-white py-3 px-6 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center" style={{ color: '#4d5d6d' }}>
-              Visit Ark Spindles™
+              Visit ARK SPINDLES™
               <ExternalLink className="ml-2 h-5 w-5" />
             </button>
           </div>
