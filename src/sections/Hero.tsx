@@ -195,7 +195,7 @@ const Hero: React.FC = () => {
   className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-thin tracking-[0.50em] mb-3 sm:mb-4 leading-tight uppercase text-white"
   style={{ fontFamily: "'Nunito Sans', sans-serif", fontStretch: 'expanded' }}
 >
-  ARK SPINDLES™
+  ARK SPINDLES<span style={{ fontSize: '0.5em', verticalAlign: 'top' }}>™</span>
 </h1>
             </div>
             
