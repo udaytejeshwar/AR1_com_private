@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import logo from '../assets/Untitled (1).png';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,36 +42,14 @@ const Navbar: React.FC = () => {
               href="#"
               className="block"
             >
-              <div className="text-center">
-                <div 
-                  className={`font-thin tracking-[0.09em] transition-colors duration-300 ${
-                    isScrolled ? 'text-gray-900' : 'text-white'
-                  }`}
-                  style={{ 
-                    fontFamily: "'Nunito Sans', sans-serif", 
-                    fontStretch: 'expanded',
-                    fontSize: '2.5rem',
-                    lineHeight: '1'
-                  }}
-                >
-                  ARKRIDGE
-                </div>
-                <div 
-                  className={`font-light transition-colors duration-300 ${
-                    isScrolled ? 'text-gray-900' : 'text-white'
-                  }`}
-                  style={{ 
-                    fontFamily: "'Nunito Sans', sans-serif", 
-                    fontStretch: 'expanded',
-                    fontSize: '1.25rem',
-                    lineHeight: '1',
-                    marginTop: '-0.0rem',
-                    letterSpacing: '0.6em'
-                  }}
-                >
-                  INDUSTRIES
-                </div>
-              </div>
+              <img 
+                src={logo} 
+                alt="ArkRidge Industries Logo" 
+                className="h-24 w-auto transition-opacity duration-300"
+                style={{ 
+                  filter: isScrolled ? 'none' : 'brightness(0) invert(1)' 
+                }}
+              />
             </a>
           </div>
 
