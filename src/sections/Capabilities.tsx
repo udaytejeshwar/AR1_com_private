@@ -15,15 +15,15 @@ const capabilities = [
   },
   {
     id: 'development',
-    title: 'Advanced Motion Systems',
-    description: 'Expanding into comprehensive motion control solutions including servo motors, linear actuators, and integrated mechatronics systems for industrial automation.',
+    title: 'Advanced Drive Systems',
+    description: 'Expanding into precision drive technologies including high-speed motors, gearbox-integrated systems, and custom mechatronic assemblies for industrial applications.',
     details: [
-      'Servo motor design and manufacturing',
-      'Linear motion systems',
+      'High-speed motor development',
       'Integrated control electronics',
+      'Gear-integrated drive systems',
       'Custom mechatronics assemblies'
     ],
-    image: 'https://images.pexels.com/photos/4386345/pexels-photo-4386345.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+    image: 'https://images.pexels.com/photos/8438865/pexels-photo-8438865.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   },
   {
     id: 'engineering',
@@ -35,7 +35,7 @@ const capabilities = [
       'Advanced materials research',
       'Comprehensive testing and validation'
     ],
-    image: 'https://images.pexels.com/photos/7788009/pexels-photo-7788009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+    image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   },
   {
     id: 'future',
@@ -47,7 +47,7 @@ const capabilities = [
       'High-performance tool holders',
       'Custom electromechanical solutions'
     ],
-    image: 'https://images.pexels.com/photos/162536/tubes-metal-components-162536.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+    image: 'https://images.pexels.com/photos/256381/tubes-metal-components-256381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   }
 ];
 
