@@ -47,7 +47,7 @@ const capabilities = [
       'High-performance tool holders',
       'Custom electromechanical solutions'
     ],
-    image: 'https://images.pexels.com/photos/256381/tubes-metal-components-256381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+    image: 'https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   }
 ];
 
