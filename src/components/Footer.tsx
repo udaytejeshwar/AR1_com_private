@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4 tracking-tighter">ARKRIDGE INDUSTRIES</h3>
+            <h3 className="text-2xl font-light mb-4 tracking-tighter">ARKRIDGE INDUSTRIES</h3>
             <p className="text-gray-400 max-w-md mb-6">
               Engineering precision motion systems and electromechanical components for next-generation industries. Building tomorrow's technology today.
             </p>
@@ -23,17 +23,8 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               <li>
                 <a href="#brands" className="text-gray-400 hover:text-white transition-colors duration-300">
-                  Ark Spindles™
+                  ARK SPINDLES™
                 </a>
-              </li>
-              <li>
-                <span className="text-gray-500">Motion Systems (Coming Soon)</span>
-              </li>
-              <li>
-                <span className="text-gray-500">Medical Components (Planned)</span>
-              </li>
-              <li>
-                <span className="text-gray-500">Aerospace Systems (Planned)</span>
               </li>
             </ul>
           </div>
