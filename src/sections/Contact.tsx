@@ -1,6 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Send } from 'lucide-react';
 
+// Replace this URL with your actual Google Apps Script Web App URL
+const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwPQ4FIu7Pg7LcIzd9Ijc6aJX7oDd-9kJHmmJZfK0bYIBINV9ZAjbjFXHkdXnjnEwpH/exec';
+
 interface FormData {
   name: string;
   email: string;
@@ -51,8 +54,23 @@ const Contact: React.FC = () => {
     setError(null);
 
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Create FormData object to send to Google Apps Script
+      const formDataToSend = new FormData();
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('company', formData.company);
+      formDataToSend.append('inquiry', formData.inquiry);
+      formDataToSend.append('message', formData.message);
+
+      // Send data to Google Apps Script
+      const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {
+        method: 'POST',
+        body: formDataToSend,
+        mode: 'no-cors' // Required for Google Apps Script
+      });
+
+      // Note: With 'no-cors' mode, we can't read the response
+      // but the request will still be processed by Google Apps Script
       
       setIsSubmitted(true);
       setFormData(initialFormData);
@@ -61,7 +79,7 @@ const Contact: React.FC = () => {
         setIsSubmitted(false);
       }, 5000);
     } catch (err) {
-      setError('Failed to submit form. Please try again later.');
+      setError('Failed to submit form. Please check your internet connection and try again.');
       console.error('Error submitting form:', err);
     } finally {
       setIsSubmitting(false);
