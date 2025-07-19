@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
                 alt="ArkRidge Industries Logo" 
                 className="h-24 w-auto transition-opacity duration-300"
                 style={{ 
-                  filter: isScrolled ? 'none' : 'brightness(0) invert(1)' 
+                  filter: isScrolled ? 'brightness(0)' : 'brightness(0) invert(1)' 
                 }}
               />
             </a>
