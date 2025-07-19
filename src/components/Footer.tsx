@@ -8,6 +8,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <h3 className="text-2xl font-light mb-4 tracking-tighter">ARKRIDGE INDUSTRIES</h3>
+            <p className="text-white-500 text-sm mb-4">GSTIN: 36ABBCA1781B1Z4</p>
             <p className="text-gray-400 max-w-md mb-6">
               Engineering precision motion systems and electromechanical components for next-generation industries. Building tomorrow's technology today.
             </p>
