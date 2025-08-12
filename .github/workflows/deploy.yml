@@ -26,10 +26,10 @@ jobs:
       - name: Copy CNAME file
         run: cp CNAME dist/
 
-      # - name: Deploy to GitHub Pages
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     personal_token: ${{ secrets.DEPLOY_TOKEN }}
-      #     external_repository: udaytejeshwar/AR_com_public
-      #     publish_branch: gh-pages
-      #     publish_dir: ./dist
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.DEPLOY_TOKEN }}
+          external_repository: udaytejeshwar/AR_com_public
+          publish_branch: gh-pages
+          publish_dir: ./dist
