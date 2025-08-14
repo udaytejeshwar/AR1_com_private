@@ -149,6 +149,39 @@ const Hero: React.FC = () => {
       
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
 
+      {/* Main Content - Always Visible */}
+      <div className="relative h-full flex items-center justify-center text-white px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
+        <div className="max-w-6xl mx-auto text-center w-full">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tighter mb-4 sm:mb-6">
+            Precision at the Core. <br className="hidden sm:block" />
+            <span className="sm:hidden"> </span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-400">
+              Innovation at Scale.
+            </span>
+          </h1>
+          
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-8 sm:mb-10 max-w-4xl mx-auto leading-relaxed px-2">
+            ArkRidge Industries designs and builds advanced motion systems and critical electromechanical components for next-generation industries.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-2">
+            <a 
+              href="#vision"
+              className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-white rounded-lg text-lg sm:text-xl font-bold hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105 w-full sm:w-auto justify-center"
+              style={{ color: '#4d5d6d' }}
+            >
+              Our Vision
+            </a>
+            <a 
+              href="#brands"
+              className="px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-white rounded-md text-base sm:text-lg font-medium hover:bg-white/10 transition-all duration-300 w-full sm:w-auto text-center"
+            >
+              Our Products
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Commented out Revealed Content - Ark Spindles */}
       {/* <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-800">
         <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3822843/pexels-photo-3822843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] bg-cover bg-center opacity-10" />
@@ -281,38 +314,6 @@ const Hero: React.FC = () => {
       {/* Commented out Right edge visual indicator */}
       {/* <div className="absolute right-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-blue-400/50 to-transparent z-30 pointer-events-none"></div> */}
 
-      {/* Main Content - Always Visible */}
-      <div className="relative h-full flex items-center justify-center text-white px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
-        <div className="max-w-6xl mx-auto text-center w-full">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tighter mb-4 sm:mb-6">
-            Precision at the Core. <br className="hidden sm:block" />
-            <span className="sm:hidden"> </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-400">
-              Innovation at Scale.
-            </span>
-          </h1>
-          
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-8 sm:mb-10 max-w-4xl mx-auto leading-relaxed px-2">
-            ArkRidge Industries designs and builds advanced motion systems and critical electromechanical components for next-generation industries.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-2">
-            <a 
-              href="#vision"
-              className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-white rounded-lg text-lg sm:text-xl font-bold hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105 w-full sm:w-auto justify-center"
-              style={{ color: '#4d5d6d' }}
-            >
-              Our Vision
-            </a>
-            <a 
-              href="#brands"
-              className="px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-white rounded-md text-base sm:text-lg font-medium hover:bg-white/10 transition-all duration-300 w-full sm:w-auto text-center"
-            >
-              Our Products
-            </a>
-          </div>
-        </div>
-      </div>
       
       {/* Scroll Indicator */}
       <div className="absolute bottom-6 sm:bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
