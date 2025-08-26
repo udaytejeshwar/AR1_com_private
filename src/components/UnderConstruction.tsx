@@ -1,5 +1,4 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Clock, Wrench } from 'lucide-react';
 import logo from '../assets/Logo.png';
 
 const UnderConstruction: React.FC = () => {
@@ -22,35 +21,21 @@ const UnderConstruction: React.FC = () => {
           />
         </div>
 
-        {/* Construction Icon */}
-        <div className="mb-8">
-          <div className="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 mb-6">
-            <Wrench className="w-10 h-10 sm:w-12 sm:h-12 text-white animate-pulse" />
-          </div>
-        </div>
-
         {/* Main Heading */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-          Website Under 
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
-            Construction
-          </span>
+          Under Maintenance
         </h1>
 
         {/* Description */}
         <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-          We're working hard to bring you an enhanced digital experience. 
-          Our new website will showcase our precision engineering capabilities and advanced manufacturing solutions.
+          Our website is currently undergoing scheduled maintenance to improve your experience. 
+          We'll be back online shortly.
         </p>
 
         <div className="mb-12">
-          <p className="text-base sm:text-lg text-gray-400 mb-4">
-            Expected completion: Coming Soon
+          <p className="text-base sm:text-lg text-gray-400">
+            We appreciate your patience
           </p>
-          <div className="flex items-center justify-center text-gray-400">
-            <Clock className="w-5 h-5 mr-2" />
-            <span>We appreciate your patience</span>
-          </div>
         </div>
 
         {/* Contact Information */}
@@ -63,11 +48,6 @@ const UnderConstruction: React.FC = () => {
             {/* Contact Details */}
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-white" />
-                  </div>
-                </div>
                 <div>
                   <h3 className="font-semibold text-lg mb-1">Email</h3>
                   <a 
@@ -80,11 +60,6 @@ const UnderConstruction: React.FC = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                </div>
                 <div>
                   <h3 className="font-semibold text-lg mb-1">Phone</h3>
                   <a 
@@ -100,11 +75,6 @@ const UnderConstruction: React.FC = () => {
             {/* Address and Hours */}
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-white" />
-                  </div>
-                </div>
                 <div>
                   <h3 className="font-semibold text-lg mb-1">Address</h3>
                   <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
@@ -115,11 +85,6 @@ const UnderConstruction: React.FC = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center">
-                    <Clock className="w-6 h-6 text-white" />
-                  </div>
-                </div>
                 <div>
                   <h3 className="font-semibold text-lg mb-1">Business Hours</h3>
                   <p className="text-gray-300 text-sm sm:text-base">
@@ -131,19 +96,6 @@ const UnderConstruction: React.FC = () => {
             </div>
           </div>
 
-          {/* Company Description */}
-          <div className="border-t border-white/20 pt-8">
-            <h3 className="text-xl font-semibold mb-4">About ArkRidge Industries</h3>
-            <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-              We design and manufacture advanced motion systems and critical electromechanical components 
-              for aerospace, medical, defense, and industrial sectors. Currently serving the market with 
-              our <strong>ARK SPINDLES™</strong> precision electrospindle technology.
-            </p>
-            <p className="text-gray-400 text-sm mt-4">
-              GSTIN: 36ABBCA1781B1Z4
-            </p>
-          </div>
-
           {/* CTA */}
           <div className="mt-8 pt-6 border-t border-white/20">
             <p className="text-gray-300 mb-4">
@@ -151,9 +103,8 @@ const UnderConstruction: React.FC = () => {
             </p>
             <a 
               href="mailto:info@arkridgeindustries.com?subject=Website%20Inquiry" 
-              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="inline-flex items-center justify-center px-8 py-4 bg-gray-700 text-white rounded-lg font-semibold hover:bg-gray-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              <Mail className="w-5 h-5 mr-2" />
               Contact Us Now
             </a>
           </div>
