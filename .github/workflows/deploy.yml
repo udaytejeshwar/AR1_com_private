@@ -3,6 +3,13 @@ name: Deploy to Public GitHub Pages Repo
 on:
   push:
     branches: [main]
+  workflow_dispatch:
+    inputs:
+      under_construction:
+        description: 'Enable Under Construction mode'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   build-and-deploy:
@@ -22,6 +29,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          VITE_UNDER_CONSTRUCTION: ${{ github.event.inputs.under_construction || 'false' }}
 
       - name: Copy CNAME file
         run: cp CNAME dist/
