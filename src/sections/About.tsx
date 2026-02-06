@@ -46,7 +46,7 @@ const About: React.FC = () => {
               <div className="bg-gray-50 border-l-4 border-gray-600 p-6 mb-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Current Operations</h3>
                 <p className="text-gray-700">
-                  We currently manufacture high-performance motors</strong>. These products are engineered for demanding machining applications across wood, stone, and aluminum processing, serving as our foundation for broader manufacturing excellence.
+                  We currently manufacture high-performance motors. These products are engineered for demanding machining applications across wood, stone, and aluminum processing, serving as our foundation for broader manufacturing excellence.
                 </p>
               </div>
               
