@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               <li>
                 <a href="#brands" className="text-gray-400 hover:text-white transition-colors duration-300">
-                  ARK SPINDLES™
+                  {/* ARK SPINDLES™ */}
                 </a>
               </li>
             </ul>
