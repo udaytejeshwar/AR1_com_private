@@ -99,7 +99,7 @@ const Contact: React.FC = () => {
             Partner with ArkRidge Industries
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Whether you need our current spindle technology or want to discuss future collaboration opportunities, we're here to help engineer your next breakthrough.
+            Whether you need our current HF motor technology or want to discuss future collaboration opportunities, we're here to help engineer your next breakthrough.
           </p>
         </div>
         
@@ -192,7 +192,7 @@ const Contact: React.FC = () => {
                       style={{ focusRingColor: '#4d5d6d' }}
                     >
                       <option value="general">General Inquiry</option>
-                      <option value="spindles">Ark Spindles™ Products</option>
+                      {/* <option value="spindles">Ark Spindles™ Products</option> */}
                       <option value="partnership">Partnership Opportunities</option>
                       <option value="custom">Custom Development</option>
                       <option value="investment">Investment/Funding</option>
