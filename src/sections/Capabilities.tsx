@@ -11,7 +11,7 @@ const capabilities = [
       'Custom motor configurations',
       'Industrial-grade reliability testing'
     ],
-    image: 'https://images.pexels.com/photos/3822843/pexels-photo-3822843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+    image: 'https://images.pexels.com/photos/6942294/pexels-photo-6942294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   },
   {
     id: 'development',
