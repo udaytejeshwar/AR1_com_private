@@ -275,7 +275,7 @@ const Contact: React.FC = () => {
                 <h4 className="font-semibold mb-3">Quick Links</h4>
                 <div className="space-y-2">
                   <a href="#brands" className="block text-gray-200 hover:text-white transition-colors">
-                    → ARK SPINDLES™
+                    {/* → ARK SPINDLES™ */}
                   </a>
                   <a href="#capabilities" className="block text-gray-200 hover:text-white transition-colors">
                     → Engineering Capabilities
