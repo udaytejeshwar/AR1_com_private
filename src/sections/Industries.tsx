@@ -16,7 +16,7 @@ const industries = [
   {
     id: 3,
     name: 'CNC & Robotics',
-    description: 'Currently serving this sector with our Ark Spindles™ electrospindle line. Expanding into advanced tool holders and precision motion systems for industrial automation.',
+    description: 'Currently serving this sector with our high frequency motors. Expanding into advanced tool holders and precision motion systems for industrial automation.',
     image: 'https://images.pexels.com/photos/10406128/pexels-photo-10406128.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   },
   {
