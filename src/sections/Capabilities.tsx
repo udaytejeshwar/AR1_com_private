@@ -3,10 +3,10 @@ import React, { useEffect, useRef, useState } from 'react';
 const capabilities = [
   {
     id: 'current',
-    title: 'Precision Spindle Technology',
+    title: 'Precision high frequency motor Technology',
     description: 'Our flagship capability: high-performance electrospindles with advanced thermal management, precision bearings, and custom configurations for demanding CNC applications.',
     details: [
-      'High-speed precision spindles up to 60,000 RPM',
+      'High-speed precision motors up to 40,000 RPM',
       'Advanced thermal management systems',
       'Custom motor configurations',
       'Industrial-grade reliability testing'
