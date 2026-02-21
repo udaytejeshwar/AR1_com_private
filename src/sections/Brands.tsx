@@ -45,13 +45,13 @@ const Brands: React.FC = () => {
                 <h3 className="text-1xl sm:text-2xl md:text-3xl font-thin tracking-[0.20em] mb-3 sm:mb-4 leading-tight uppercase text-white"
   style={{ fontFamily: "'Nunito Sans', sans-serif", fontStretch: 'expanded' }}
 >
-  ARK SPINDLES<span className="text-[0.5em] ml-[0.1em]"
+  {/* ARK SPINDLES<span className="text-[0.5em] ml-[0.1em]" */}
     style={{ verticalAlign: 'super' }}>™</span></h3>
               </div>
             </div>
             
             <p className="text-gray-200 text-lg mb-6 leading-relaxed">
-              High-performance electrospindles engineered for demanding CNC machining applications. Precision-built for wood, stone, and aluminum processing with exceptional reliability and performance.
+              High-performance motors engineered for demanding  machining applications. Precision-built for wood, stone, and aluminum processing with exceptional reliability and performance.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
@@ -74,7 +74,7 @@ const Brands: React.FC = () => {
             </div>
             
             <button className="w-full bg-white py-3 px-6 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center" style={{ color: '#4d5d6d' }}>
-              Visit ARK SPINDLES™
+              {/* Visit ARK SPINDLES™ */}
               <ExternalLink className="ml-2 h-5 w-5" />
             </button>
           </div>
