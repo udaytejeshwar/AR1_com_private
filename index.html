@@ -55,6 +55,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: min(92vw, 1000px);
+    padding-inline: 12px;
+    text-align: center;
   }
 
   .title-glow {
@@ -146,7 +149,7 @@
   .contact {
     position: fixed;
     bottom: 88px;
-    left: 45%;
+    left: 50%;
     transform: translateX(-50%);
     z-index: 10;
     display: flex;
@@ -232,6 +235,98 @@
     background: rgba(255,255,255,0.15);
     flex-shrink: 0;
   }
+
+  @media (hover: none), (pointer: coarse) {
+    html, body {
+      cursor: auto;
+    }
+
+    .cursor,
+    .cursor-ring {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .company-name {
+      letter-spacing: 0.34em;
+      text-indent: 0.34em;
+      white-space: normal;
+      line-height: 1.25;
+    }
+
+    .tagline {
+      letter-spacing: 0.3em;
+      text-indent: 0.3em;
+    }
+
+    .contact {
+      bottom: max(56px, env(safe-area-inset-bottom));
+    }
+
+    .copyright {
+      left: 50%;
+      bottom: max(18px, env(safe-area-inset-bottom));
+      transform: translateX(-50%);
+      width: min(92vw, 650px);
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px 10px;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .title-glow {
+      width: 130vw;
+      height: 180px;
+      filter: blur(9px);
+    }
+
+    .company-name {
+      font-size: clamp(23px, 8vw, 34px);
+      letter-spacing: 0.24em;
+      text-indent: 0.24em;
+    }
+
+    .title-line {
+      margin-top: 14px;
+    }
+
+    .tagline {
+      margin-top: 12px;
+      font-size: clamp(8px, 2.6vw, 12px);
+      letter-spacing: 0.2em;
+      text-indent: 0.2em;
+      line-height: 1.5;
+    }
+
+    .contact {
+      bottom: max(64px, env(safe-area-inset-bottom));
+      gap: 8px;
+    }
+
+    .contact-link {
+      font-size: 11px;
+      letter-spacing: 0.24em;
+      padding: 9px 22px;
+      padding-left: calc(22px + 0.24em);
+    }
+
+    .copyright {
+      bottom: max(14px, env(safe-area-inset-bottom));
+    }
+
+    .copyright-dot {
+      display: none;
+    }
+
+    .copyright-text {
+      font-size: 8px;
+      letter-spacing: 0.14em;
+      white-space: normal;
+    }
+  }
 </style>
 </head>
 <body>
@@ -273,25 +368,29 @@
   document.getElementById('contactLink').href = 'mailto:' + parts.join('');
 
   /* ── CURSOR ── */
-  var dot  = document.getElementById('cursor');
-  var ring = document.getElementById('cursorRing');
-  var mx = window.innerWidth / 2, my = window.innerHeight / 2;
-  var rx = mx, ry = my;
+  var isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
 
-  document.addEventListener('mousemove', function (e) {
-    mx = e.clientX;
-    my = e.clientY;
-  });
+  if (!isTouch) {
+    var dot  = document.getElementById('cursor');
+    var ring = document.getElementById('cursorRing');
+    var mx = window.innerWidth / 2, my = window.innerHeight / 2;
+    var rx = mx, ry = my;
 
-  (function tickCursor() {
-    dot.style.left  = mx + 'px';
-    dot.style.top   = my + 'px';
-    rx += (mx - rx) * 0.12;
-    ry += (my - ry) * 0.12;
-    ring.style.left = rx + 'px';
-    ring.style.top  = ry + 'px';
-    requestAnimationFrame(tickCursor);
-  }());
+    document.addEventListener('mousemove', function (e) {
+      mx = e.clientX;
+      my = e.clientY;
+    });
+
+    (function tickCursor() {
+      dot.style.left  = mx + 'px';
+      dot.style.top   = my + 'px';
+      rx += (mx - rx) * 0.12;
+      ry += (my - ry) * 0.12;
+      ring.style.left = rx + 'px';
+      ring.style.top  = ry + 'px';
+      requestAnimationFrame(tickCursor);
+    }());
+  }
 
   /* ── CANVAS ── */
   var canvas = document.getElementById('c');
@@ -315,7 +414,7 @@
     [70,  100, 120]
   ];
 
-  var COUNT = 160;
+  var COUNT = isTouch ? 90 : 160;
   var pts   = [];
 
   function init() {

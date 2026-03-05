@@ -19,6 +19,8 @@ function App() {
     const parts = ['info', '@', 'arkridgeindustries', '.com'];
     contactLink.href = `mailto:${parts.join('')}`;
 
+    const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+
     let mx = window.innerWidth / 2;
     let my = window.innerHeight / 2;
     let rx = mx;
@@ -28,8 +30,6 @@ function App() {
       mx = event.clientX;
       my = event.clientY;
     };
-
-    document.addEventListener('mousemove', onMouseMove);
 
     let cursorAnimationId = 0;
     const tickCursor = () => {
@@ -41,6 +41,11 @@ function App() {
       ring.style.top = `${ry}px`;
       cursorAnimationId = window.requestAnimationFrame(tickCursor);
     };
+
+    if (!isTouch) {
+      document.addEventListener('mousemove', onMouseMove);
+      tickCursor();
+    }
 
     const ctx = canvas.getContext('2d');
     if (!ctx) {
@@ -60,7 +65,7 @@ function App() {
       [70, 100, 120],
     ];
 
-    const count = 160;
+    const count = isTouch ? 90 : 160;
     let points: Array<{
       x: number;
       y: number;
@@ -161,13 +166,14 @@ function App() {
       canvasAnimationId = window.requestAnimationFrame(draw);
     };
 
-    tickCursor();
     draw();
 
     return () => {
       window.cancelAnimationFrame(cursorAnimationId);
       window.cancelAnimationFrame(canvasAnimationId);
-      document.removeEventListener('mousemove', onMouseMove);
+      if (!isTouch) {
+        document.removeEventListener('mousemove', onMouseMove);
+      }
       window.removeEventListener('resize', onResize);
     };
   }, []);
