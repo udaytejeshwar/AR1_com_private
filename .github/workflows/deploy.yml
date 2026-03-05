@@ -1,39 +1,15 @@
 name: Deploy to Public GitHub Pages Repo
-
 on:
   push:
     branches: [main]
   workflow_dispatch:
-    inputs:
-      under_construction:
-        description: 'Enable Under Construction mode'
-        required: false
-        default: false
-        type: boolean
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build
-        run: npm run build
-        env:
-          VITE_UNDER_CONSTRUCTION: ${{ github.event.inputs.under_construction || 'false' }}
-
-      - name: Copy CNAME file
-        run: cp CNAME dist/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -41,4 +17,5 @@ jobs:
           personal_token: ${{ secrets.DEPLOY_TOKEN }}
           external_repository: udaytejeshwar/AR_com_public
           publish_branch: gh-pages
-          publish_dir: ./dist
+          publish_dir: ./
+          exclude_assets: '.github,src,node_modules,*.json,*.js,*.ts,*.md'
