@@ -1,21 +1,401 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ArkRidge Industries | Precision Engineering & Advanced Manufacturing</title>
-    <meta name="description" content="ArkRidge Industries - Engineering precision motion systems and electromechanical components for aerospace, medical, defense, and industrial sectors. Building tomorrow's technology today." />
-    <meta name="keywords" content="precision engineering, motion systems, electrospindles, mechatronics, aerospace components, medical devices, industrial automation, ArkRidge Industries" />
-    <meta property="og:title" content="ArkRidge Industries | Precision Engineering & Advanced Manufacturing" />
-    <meta property="og:description" content="Engineering precision motion systems and electromechanical components for next-generation industries." />
-    <meta property="og:type" content="website" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arkridge Industries</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    width: 100%; height: 100%;
+    overflow: hidden;
+    background: #2A3138;
+    font-family: 'Montserrat', sans-serif;
+    cursor: none;
+  }
+
+  canvas {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: block;
+    z-index: 0;
+  }
+
+  /* CURSOR */
+  .cursor {
+    position: fixed;
+    width: 6px; height: 6px;
+    background: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    opacity: 0.9;
+  }
+  .cursor-ring {
+    position: fixed;
+    width: 30px; height: 30px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 998;
+    transform: translate(-50%, -50%);
+  }
+
+  /* TITLE BLOCK */
+  .title-wrap {
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title-glow {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    height: 220px;
+    background: radial-gradient(ellipse at center,
+      rgba(255,255,255,0.06) 0%,
+      rgba(255,255,255,0.02) 40%,
+      transparent 70%
+    );
+    pointer-events: none;
+    filter: blur(12px);
+    animation: breathe 5s ease-in-out infinite;
+  }
+
+  @keyframes breathe {
+    0%, 100% { opacity: 0.6; transform: translate(-50%,-50%) scaleX(1); }
+    50%       { opacity: 1;   transform: translate(-50%,-50%) scaleX(1.07); }
+  }
+
+  .company-name {
+    font-weight: 200;
+    font-size: clamp(24px, 3.65vw, 55px);
+    letter-spacing: 0.6em;
+    text-indent: 0.6em;
+    color: #ffffff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    animation: fadein 2.2s ease forwards 0.5s;
+    text-shadow:
+      /* emboss — light catch top-left, dark indent bottom-right */
+      -1px -1px 0px rgba(255,255,255,0.55),
+      1px  1px  0px rgba(0,0,0,0.75),
+      -2px -2px 1px rgba(255,255,255,0.15),
+      2px  2px  2px rgba(0,0,0,0.5),
+      /* cinematic glow */
+      0 0 40px rgba(255,255,255,0.12),
+      0 0 90px rgba(255,255,255,0.05);
+  }
+
+  .title-line {
+    height: 1px;
+    width: 0;
+    margin-top: 20px;
+    background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(255,255,255,0.2) 10%,
+      rgba(255,255,255,0.85) 50%,
+      rgba(255,255,255,0.2) 90%,
+      transparent 100%
+    );
+    box-shadow: 0 0 8px rgba(255,255,255,0.3), 0 0 20px rgba(255,255,255,0.1);
+    position: relative;
+    z-index: 2;
+    animation: expand 2s cubic-bezier(0.77,0,0.18,1) forwards 1.4s;
+  }
+
+  .tagline {
+    font-weight: 200;
+    font-size: clamp(9px, 1vw, 13px);
+    letter-spacing: 0.45em;
+    text-indent: 0.45em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.47);
+    margin-top: 16px;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    animation: fadein 2s ease forwards 2.2s;
+  }
+
+  @keyframes fadein {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes expand {
+    from { width: 0; opacity: 0; }
+    to   { width: clamp(240px, 36vw, 560px); opacity: 1; }
+  }
+
+  /* CONTACT */
+  .contact {
+    position: fixed;
+    bottom: 88px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    opacity: 0;
+    animation: fadein 1.6s ease forwards 2.6s;
+  }
+
+  .contact-bar {
+    width: 1px;
+    height: 30px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.35), transparent);
+  }
+
+  .contact-link {
+    font-weight: 200;
+    font-size: 12px;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    cursor: none;
+    padding: 10px 32px;
+    position: relative;
+    transition: color 0.35s;
+    /* shift padding-left to visually center the spaced text */
+    padding-left: calc(32px + 0.42em);
+  }
+
+  /* border-draw spans */
+  .contact-link span {
+    position: absolute;
+    background: rgba(255,255,255,0.5);
+  }
+  /* top edge: left half and right half */
+  .contact-link .t1 { top:0; left:50%; height:1px; width:0; transition: width 0.28s ease; }
+  .contact-link .t2 { top:0; right:50%; height:1px; width:0; transition: width 0.28s ease; }
+  /* bottom edge */
+  .contact-link .b1 { bottom:0; left:50%; height:1px; width:0; transition: width 0.28s ease 0.05s; }
+  .contact-link .b2 { bottom:0; right:50%; height:1px; width:0; transition: width 0.28s ease 0.05s; }
+  /* left edge: top half and bottom half */
+  .contact-link .l1 { left:0; top:50%; width:1px; height:0; transition: height 0.22s ease 0.12s; }
+  .contact-link .l2 { left:0; bottom:50%; width:1px; height:0; transition: height 0.22s ease 0.12s; }
+  /* right edge */
+  .contact-link .r1 { right:0; top:50%; width:1px; height:0; transition: height 0.22s ease 0.12s; }
+  .contact-link .r2 { right:0; bottom:50%; width:1px; height:0; transition: height 0.22s ease 0.12s; }
+
+  .contact-link:hover { color: rgba(255,255,255,0.95); }
+  .contact-link:hover .t1,
+  .contact-link:hover .t2,
+  .contact-link:hover .b1,
+  .contact-link:hover .b2 { width: 50%; }
+  .contact-link:hover .l1,
+  .contact-link:hover .l2,
+  .contact-link:hover .r1,
+  .contact-link:hover .r2 { height: 50%; }
+
+  /* COPYRIGHT */
+  .copyright {
+    position: fixed;
+    bottom: 28px;
+    left: 48px;
+    z-index: 10;
+    opacity: 0;
+    animation: fadein 1.6s ease forwards 3s;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .copyright-text {
+    font-weight: 200;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.30);
+    white-space: nowrap;
+  }
+  .copyright-dot {
+    width: 2px; height: 2px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    flex-shrink: 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<canvas id="c"></canvas>
+
+<div class="title-wrap">
+  <div class="title-glow"></div>
+  <div class="company-name">Arkridge Industries</div>
+  <div class="title-line"></div>
+  <div class="tagline">Engineering Solutions For TOMORROW</div>
+</div>
+
+<div class="contact">
+  <div class="contact-bar"></div>
+  <a class="contact-link" id="contactLink">
+    <span class="t1"></span><span class="t2"></span>
+    <span class="b1"></span><span class="b2"></span>
+    <span class="l1"></span><span class="l2"></span>
+    <span class="r1"></span><span class="r2"></span>
+    Contact Us
+  </a>
+</div>
+
+<div class="copyright">
+  <span class="copyright-text">© 2025 Arkridge Industries Private Limited</span>
+  <div class="copyright-dot"></div>
+  <span class="copyright-text">All Rights Reserved</span>
+</div>
+
+<script>
+(function () {
+
+  /* ── mailto set via JS so no static email string in HTML ── */
+  var parts = ['info', '@', 'arkridgeindustries', '.com'];
+  document.getElementById('contactLink').href = 'mailto:' + parts.join('');
+
+  /* ── CURSOR ── */
+  var dot  = document.getElementById('cursor');
+  var ring = document.getElementById('cursorRing');
+  var mx = window.innerWidth / 2, my = window.innerHeight / 2;
+  var rx = mx, ry = my;
+
+  document.addEventListener('mousemove', function (e) {
+    mx = e.clientX;
+    my = e.clientY;
+  });
+
+  (function tickCursor() {
+    dot.style.left  = mx + 'px';
+    dot.style.top   = my + 'px';
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px';
+    ring.style.top  = ry + 'px';
+    requestAnimationFrame(tickCursor);
+  }());
+
+  /* ── CANVAS ── */
+  var canvas = document.getElementById('c');
+  var ctx    = canvas.getContext('2d');
+  var W, H, CX, CY;
+
+  function resize() {
+    W  = canvas.width  = window.innerWidth;
+    H  = canvas.height = window.innerHeight;
+    CX = W / 2;
+    CY = H / 2;
+  }
+  resize();
+  window.addEventListener('resize', function () { resize(); init(); });
+
+  var COLORS = [
+    [255, 255, 255],
+    [210, 222, 230],
+    [165, 185, 200],
+    [110, 140, 160],
+    [70,  100, 120]
+  ];
+
+  var COUNT = 160;
+  var pts   = [];
+
+  function init() {
+    pts = [];
+    for (var i = 0; i < COUNT; i++) {
+      var c = COLORS[Math.floor(Math.random() * COLORS.length)];
+      pts.push({
+        x: Math.random() * W,
+        y: Math.random() * H,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+        r:  Math.random() * 1.2 + 0.2,
+        op: Math.random() * 0.45 + 0.08,
+        cr: c[0], cg: c[1], cb: c[2]
+      });
+    }
+  }
+  init();
+
+  /* initial clear */
+  ctx.fillStyle = '#2A3138';
+  ctx.fillRect(0, 0, W, H);
+
+  function draw() {
+    /* trail */
+    ctx.fillStyle = 'rgba(42,49,56,0.2)';
+    ctx.fillRect(0, 0, W, H);
+
+    /* vignette */
+    var vig = ctx.createRadialGradient(CX, CY, H * 0.1, CX, CY, H * 0.85);
+    vig.addColorStop(0, 'transparent');
+    vig.addColorStop(1, 'rgba(10,14,18,0.75)');
+    ctx.fillStyle = vig;
+    ctx.fillRect(0, 0, W, H);
+
+    /* center glow */
+    var gl = ctx.createRadialGradient(CX, CY, 0, CX, CY, Math.min(W, H) * 0.38);
+    gl.addColorStop(0, 'rgba(255,255,255,0.018)');
+    gl.addColorStop(1, 'transparent');
+    ctx.fillStyle = gl;
+    ctx.fillRect(0, 0, W, H);
+
+    /* particles */
+    for (var i = 0; i < COUNT; i++) {
+      var p = pts[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0) p.x = W;
+      if (p.x > W) p.x = 0;
+      if (p.y < 0) p.y = H;
+      if (p.y > H) p.y = 0;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(' + p.cr + ',' + p.cg + ',' + p.cb + ',' + p.op + ')';
+      ctx.fill();
+    }
+
+    /* connections */
+    ctx.lineWidth = 0.4;
+    for (var i = 0; i < COUNT; i++) {
+      for (var j = i + 1; j < COUNT; j++) {
+        var dx = pts[i].x - pts[j].x;
+        var dy = pts[i].y - pts[j].y;
+        var d  = Math.sqrt(dx * dx + dy * dy);
+        if (d < 105) {
+          ctx.strokeStyle = 'rgba(185,210,225,' + ((1 - d / 105) * 0.16) + ')';
+          ctx.beginPath();
+          ctx.moveTo(pts[i].x, pts[i].y);
+          ctx.lineTo(pts[j].x, pts[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  draw();
+
+}());
+</script>
+</body>
 </html>
